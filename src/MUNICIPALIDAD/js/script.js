@@ -4,8 +4,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const button = document.querySelector("button");
   /* when click on button call the buttonAlert function */
 
-  button.addEventListener("click", processTable);
-
   // Prevenir comportamientos de arrastrar por defecto
   ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
     dropArea.addEventListener(eventName, preventDefaults, false);
