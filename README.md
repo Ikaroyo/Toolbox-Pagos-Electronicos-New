@@ -1,1 +1,1 @@
-![Logo](https://ikaroyo.github.io/Toolbox-Pagos-Electronicos/assets/logo.png)
+![Logo](https://ikaroyo.github.io/Toolbox-Pagos-Electronicos-New/src/logo-osm.png)
