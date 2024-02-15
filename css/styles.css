@@ -9,6 +9,11 @@ body {
   height: 100vh;
   /* Añadido */
   overflow: hidden;
+  /* disable scroll bar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 #iframe-container {
