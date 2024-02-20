@@ -116,7 +116,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
       while ((matchRecaudacion = regexRecaudacion.exec(text))) {
         const fechaRecaudacion = matchRecaudacion[1];
-        const importe = matchRecaudacion[3].replace(".", "");
+        let importe = matchRecaudacion[3].replace(/\./g, ""); // Eliminar todos los puntos
+        importe = importe.replace(",", "."); // Reemplazar la coma por un punto
+
         const cupones = matchRecaudacion[2];
 
         let matchAfectacion;
