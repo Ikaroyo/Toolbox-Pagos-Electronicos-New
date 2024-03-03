@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 body {
   background-color: #1a1a1a;
   color: #fff;
@@ -24,6 +25,7 @@ body {
 #iframe-container {
   flex-grow: 1;
   /* Añadido */
+  padding-top: 5px;
 }
 
 #content iframe {
