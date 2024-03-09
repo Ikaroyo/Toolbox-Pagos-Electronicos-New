@@ -187,3 +187,7 @@
         font-weight: bold;
         color: lightcoral;
     }
+
+    .hidden {
+        display: none;
+    }
