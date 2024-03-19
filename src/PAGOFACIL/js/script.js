@@ -25,10 +25,14 @@ function sortTableByDate(dataTable) {
 function formatDateForComparison(dateString) {
   // Si el formato de la fecha es dd/mm/yyyy, lo convertimos a yyyy/mm/dd
   const parts = dateString.split("/");
-  return `${parts[2]}/${parts[1]}/${parts[0]}`;
+  return `20${parts[2]}/${parts[1]}/${parts[0]}`;
 }
 
 function orderTable() {
+  // dataTable-OP and dataTable-pA ids
+  const dataTablepA = document.getElementById("dataTable-pA");
+  const dataTableOP = document.getElementById("dataTable-OP");
+
   sortTableByDate(dataTablepA);
   sortTableByDate(dataTableOP);
 }
@@ -102,9 +106,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     pAFiles.forEach(uploadFilepA);
     // Llamada a uploadFileOP comentada para ser llamada después
     OPFiles.forEach(uploadFileOP);
-
-    // order table
-    orderTable();
   }
 
   function uploadFilepA(file) {
@@ -253,6 +254,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       totalBrutoCell.textContent = totalBruto.toFixed(2); // Redondear el total bruto a dos decimales
       fileNameCell.textContent = fileName;
     }
+
+    // order table
+    orderTable();
   }
 
   // Función para formatear la fecha al formato dd/mm/yyyy
@@ -272,7 +276,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     return `${day}/${month}/${year}`;
   }
 
-  function processTable() {}
+  function processTable() {
+    orderTable();
+  }
 
   function clearTable() {
     for (let i = dataTablepA.rows.length - 1; i > 0; i--) {
