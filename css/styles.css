@@ -26,6 +26,8 @@ body {
   flex-grow: 1;
   /* Añadido */
   padding-top: 5px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #content iframe {
