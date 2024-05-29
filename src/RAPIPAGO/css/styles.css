@@ -13,6 +13,9 @@ body {
     text-align: center;
     padding: 40px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #dataTable {
@@ -61,4 +64,8 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.hidden {
+    display: none;
 }
